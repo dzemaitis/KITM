@@ -5,27 +5,28 @@
 	<title>Prototipas</title>
 </head>
 <body>
-	<header>
-		<img src=""> <!-- Logotipas. I DIVA IDETI. VISKA I DIV IS ESMES(REIKIA STRUKTUROS NEPALEIST IMG). INPUT GERIAUSIA FORMOSE-->
-		<aside>
-			<div>
-				<nav>
-					<ul>
-						<li>Asociacija</li>
-						<li>Filosofija</li>
-						<li>Kontaktai</li>
-					</ul>
-				</nav>
-			</div>
-			<div>
-				<form>
-					<input type="text" name="laukelis" placeholder="paieska">
-					<input type="submit" name="mygtukas"> <!-- SENAS. submit type. NAUJAI REIKIA -->
-				</form>
-			</div>
-		</aside>
+	<header> <!-- ..............................HEADER.............................. -->
+		<div>
+			<img src="http://example.com" alt="logotipas">
+		</div>
+		<div>
+			<nav>
+				<ul>
+					<li>Asociacija</li>
+					<li>Filosofija</li>
+					<li>Kontaktai</li>
+				</ul>
+			</nav>
+		</div>
+		<div>
+			<form> 
+				<input type="text" name="paieskos_laukelis" placeholder="paieska">
+				<button type="submit" value="Submit">tekstas</button>
+				<!-- Kodel nebenaudoti : <input type="submit" name="mygtukas">  ? -->
+			</form>
+		</div>
 	</header>
-	<nav>
+	<nav> <!-- ..............................NAVIGATION BAR..............................-->
 		<ul>
 			<li>Naujienos</li>
 			<li>Veikla</li>
@@ -34,9 +35,13 @@
 			<li>Straipsniai</li>
 		</ul>
 	</nav>
-	<section>
-		<h1>Tapkite LSA nariu</h1> <!-- Nuotrauku slide -->
-		<aside>
+	<section> <!-- ..............................SECTION .............................. -->
+		<div>
+			<img src="http://example.com" alt=""> 
+			<img src="http://example.com" alt=""> 
+			<img src="http://example.com" alt=""> 
+		</div>
+		<div>
 			<h2>Artimiausi renginiai</h2>
 			<h3>Visi renginiai</h3>
 			<nav>
@@ -47,43 +52,83 @@
 					<li></li>
 				</ul>
 			</nav>
-			<button>Registruotis i rengini</button>
-		</aside>
+		</div>
+		<div>
+			<button type="submit" value="Submit">Registruotis i rengini</button>
+		</div>	
 	</section>
-	<main>
+	<main> <!-- ..............................MAIN.............................. -->
 		<h1>Naujienos</h1>
-		<h2>Naujienu archyvas>
-		<section></section> <!-- Cia geriau articles, nei section. Section platesnis savoka, nors veikia jie taip pat. -->
-		<section></section>
-		<section></section> <!-- ar cia ideti aside, kad dvi naujienos lygiagreciai butu? -->
-		<section></section>
-		<button></button> <!-- Naujienu puslapiu mygtukai -->
+		<h2>Naujienu archyvas</h2>
+		<article>
+			<h3>Antraste</h3>
+			<p>data</p>
+			<img src="http://example.com" alt="naujienos_nuotrauka">
+			<p>tekstas</p>
+			<button>Skaityti daugiau</button>
+		</article>
+		<article>
+			<h3>Antraste</h3>
+			<p>data</p>
+			<img src="http://example.com" alt="naujienos_nuotrauka">
+			<p>tekstas</p>
+			<button>Skaityti daugiau</button>
+		</article>
+		<article>
+			<h3>Antraste</h3>
+			<p>data</p>
+			<img src="http://example.com" alt="naujienos_nuotrauka">
+			<p>tekstas</p>
+			<button>Skaityti daugiau</button>
+		</article>
+		<article>
+			<h3>Antraste</h3>
+			<p>data</p>
+			<img src="http://example.com" alt="naujienos_nuotrauka">
+			<p>tekstas</p>
+			<button>Skaityti daugiau</button>
+		</article>
+		<div>
+			<button>Pirmas puslapis</button>
+			<button>Antras puslapis</button>
+			<button>Trecias puslapis</button>
+			<button>Ketvirtas puslapis</button> 
+		</div> 
 	</main>
-	<section>
-		<h1>Nuotrauku galerija</h1>
-		<h2>Archyvas</h2>
-		<!-- Nuotrauku slide -->
+	<section> <!-- ..............................SECTION.............................. -->
+		<h2>Nuotrauku galerija</h2>
+		<h3>Archyvas</h3>
+		<img src="http://example.com" alt="">
+		<img src="http://example.com" alt="">
+		<img src="http://example.com" alt="">
+		<img src="http://example.com" alt="">
+		<img src="http://example.com" alt="">
 	</section>
-	<section>
-		<h1>Bendradarbiaujame</h1>
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
-		<img src="">
+	<section> <!-- ..............................SECTION.............................. -->
+		<div>
+			<h2>Bendradarbiaujame</h2>
+			<a href=""><img src="http://example.com" alt=""></a>
+			<a href=""><img src="http://example.com" alt=""></a>
+			<a href=""><img src="http://example.com" alt=""></a>
+			<a href=""><img src="http://example.com" alt=""></a>
+			<a href=""><img src="http://example.com" alt=""></a>
+		</div>
+		<div>
+			<h2>Naudingos nuorodos</h2>
+			<ul>
+				<li><a href="">Linkas</a></li>
+				<li><a href="">Linkas</a></li>
+				<li><a href="">Linkas</a></li>
+				<li><a href="">Linkas</a></li>
+				<li><a href="">Linkas</a></li>
+			</ul>
+		</div>
 	</section>
-	<section>
-		<h1>Naudingos nuorodos</h1>
-	</section>
-	<footer>
-		<p>2015m. Lietuvos suzuki asociacija</p>
-		<p>Kaunas LT-4421</p>
+	<footer> <!-- ..............................FOOTER.............................. -->
+		<div>
+			<p>2015m. Lietuvos suzuki asociacija</p>
+			<p>Kaunas LT-4421</p>
+		</div>
 	</footer>
 </body>
 </html>
-
-
-<!-- http://web-training.lt/uzduotys/prototipas.pdf -->
