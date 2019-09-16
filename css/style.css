@@ -1,0 +1,39 @@
+/*selektoriai*/
+/*Basic tags*/
+
+
+*{ /*VISI*/
+	background-color: aqua;
+}
+
+main{ /*Cia sekcijas/divus*/
+	background-color: green;
+}
+
+nav{
+	background-color: blue;
+}
+
+#super{ /*pagal id*/
+	background-color: red;
+}
+
+.Importlink{ /*pagal klase*/
+	background-color: black; 
+}
+
+.center{
+	text-align: center;
+}
+
+a[href^="hsttp"], a[href$=".pdf"]{ /*PAGAL TAG atributa. tiksliau*/
+	color: red;
+}
+
+a[href$=".docx"]{
+	color: green;
+}
+
+a[href$=".xlsx"]{
+	color: white;
+}
