@@ -26,7 +26,7 @@ nav{
 	text-align: center;
 }
 
-a[href^="hsttp"], a[href$=".pdf"]{ /*PAGAL TAG atributa. tiksliau*/
+a[href^="http"], a[href$=".pdf"]{ /*PAGAL TAG atributa. tiksliau*/
 	color: red;
 }
 
@@ -37,3 +37,57 @@ a[href$=".docx"]{
 a[href$=".xlsx"]{
 	color: white;
 }
+
+
+/*PSEUDO KLASES:*/
+/*a:link{ 
+	color: red;
+}
+
+a:visited{
+	color:white;
+}
+
+div:hover{
+	color: green;
+}*/
+
+/*li:first-child{ 
+	color:green;
+}*/
+
+table,
+td {
+	border-collapse: collapse;
+    border: 1px solid #333;
+
+}
+
+thead,
+tfoot {
+    background-color: #333;
+    color: #fff;
+}
+
+tr:nth-child(even){
+	color: red;
+}
+
+tr:hover{
+	color: green;
+}
+
+
+/*PSEUDO PSEUDO KLASES*/
+p::first-letter{
+	font-size: 5em;
+}
+
+header div nav ul{
+	color: yellow;
+}
+
+header div nav ul ul{
+	color: red;
+}
+
