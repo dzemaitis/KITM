@@ -1,0 +1,39 @@
+h1{
+	text-transform: uppercase;
+	text-align: center;
+	line-height: 2.5;
+	font-size: 2em;
+}
+
+article h2{
+	text-align: right;
+	font-size: 1.3em;
+}
+
+article p{
+	text-align: justify;
+}
+
+.1{
+	font-family: 'Roboto', sans-serif;
+}
+
+.2{
+	font-family: 'Manjari', sans-serif;
+}
+
+.3{
+	font-family: 'Gayathri', sans-serif;
+}
+
+.4{
+	font-family: 'Open Sans', sans-serif;
+}
+
+.5{
+	font-family: 'Chilanka', sans-serif;
+}
+
+footer p{
+	text-align: center;
+}

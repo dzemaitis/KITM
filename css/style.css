@@ -79,9 +79,9 @@ tr:hover{
 
 
 /*PSEUDO PSEUDO KLASES*/
-p::first-letter{
+/*p::first-letter{
 	font-size: 5em;
-}
+}*/
 
 header div nav ul{
 	color: yellow;
@@ -91,3 +91,14 @@ header div nav ul ul{
 	color: red;
 }
 
+article h3{
+	font-size: 3em;
+}
+
+article p{
+	font-size: 2em;
+}
+
+article button{
+	color: black;
+}

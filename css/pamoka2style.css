@@ -1,0 +1,31 @@
+body{
+/*	background: #000 url(picture.jpg);
+	background-size:cover;
+	background-attachment: fixed;*/
+	background: linear-gradient(217deg. black, red);
+}
+
+article{
+	background: #000 url(picture.jpg); /*repeat-y, repeat-x, repeat-norepeat(JEI MAZAS IMG IR DAUG JU ATSIRANDA)*/
+	background-size:cover;
+}
+
+h1{
+	font-family: 'Robot Condensed', sans-serif;
+	font-size: 2em;
+}
+
+article h3{
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5em;
+}
+
+article p{
+	font-size: 1em;
+	font-style: italic;
+	font-weight: bold; 
+	font-family: 'Roboto', sans-serif;
+	text-transform: capitalize;
+	text-align: right;
+	line-height: 0.5;
+}
