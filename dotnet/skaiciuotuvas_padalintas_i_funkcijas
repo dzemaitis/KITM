@@ -10,15 +10,35 @@ namespace DOTNET
             Console.WriteLine("Skaiciuotuvas");
             string first_number, second_number;
             string symbol;
-            first_number = getFirstNum();
-            second_number = getSecondNum();
-            symbol = getSymbol();
-            DataTable dt = new DataTable();
-            var rez = dt.Compute(first_number + symbol + second_number, "");
-            Console.WriteLine(rez);
-
+            bool status = true;
+            // Program running until user sets status to false.
+            while(status)
+            {
+                first_number = getFirstNum();
+                second_number = getSecondNum();
+                symbol = getSymbol();
+                DataTable dt = new DataTable();
+                var rez = dt.Compute(first_number + symbol + second_number, "");
+                Console.WriteLine(first_number + " " + symbol + " " + second_number + " = " + rez);
+                
+                // Ask user if he wants to continue
+                Console.WriteLine("Continue? Y/N");
+                string q = Console.ReadLine();
+                while (q != "n" && q != "N" && q != "Y" && q != "y")
+                {
+                    Console.WriteLine("Press y to continue or n to quit");
+                    q = Console.ReadLine(); 
+                }
+                
+                if(q == "n" || q == "N"){
+                    status = false;
+                }
+                else{
+                    continue;
+                }
+            }
         }
-        //Gets and returns int first number of user input.
+        //Gets and returns first number of user input.
         public static string getFirstNum()
         {   
             string number1;
@@ -34,7 +54,7 @@ namespace DOTNET
             }
             return number1;
         }
-        //Gets and returns int second number of user input.
+        //Gets and returns second number of user input.
         public static string getSecondNum()
         {   
             string number2;
@@ -50,6 +70,7 @@ namespace DOTNET
             }
             return number2;
         }
+        // Gets and returns user picked symbol
         public static string getSymbol()
         {   
             string symb;
@@ -63,8 +84,6 @@ namespace DOTNET
             }
             return symb;
         }
-
     }
- 
 }
 
