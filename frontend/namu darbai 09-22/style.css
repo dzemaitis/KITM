@@ -1,0 +1,42 @@
+body{
+	font-family: 'Raleway', sans-serif;
+	background-color: white;
+	margin-left: 100px;
+	margin-right: 100px;
+}
+header{
+	text-align: center;
+	font-size: 2.5em;
+}
+section{
+	border-top: double;
+	border-bottom: double;
+	border-color: grey;
+	font-size: 1.35em;
+	text-align: center;
+}
+main{
+	text-align: center;
+}
+article h2{
+	font-size: 1.8em;
+}
+article{
+	vertical-align: top;
+	display: inline-block;
+	font-size: 1.2em;
+	padding: 20px;
+	max-width: 250px;
+}
+footer{
+	text-align: center;
+	margin-top: 65px;
+}
+footer p{
+	font-size: 0.9em;
+	color: grey;
+}
+footer p strong{
+	font-size: 1.1em;
+	color: black;
+}
