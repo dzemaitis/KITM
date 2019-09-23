@@ -1,0 +1,5 @@
+<!-- Namie:
+1.) Containeris(kur viskas yra). Geriausia procentais parasyti 80proc. O ne pixeliais. Reiktu zymeti *(viska), o ne body. 
+2.) article width 25proc, kad uzimtu plota visi 4 article.
+3.) margin 0 auto. Centravimui reikalingas. Ka tiksliai reiskia ?
+ -->

@@ -1,0 +1,80 @@
+/*Base*/
+*{	
+	box-sizing: border-box; /*neleidzia pvz padingui isplest bloko, ir kad nenumestu i kita linija.*/ 
+	padding: 0;
+	margin: 0;
+}
+html{
+	height: 100%;
+}
+body{
+	/*width: 80%;*/
+	margin: 0 auto;
+}
+/*Headings*/
+h1,h2,h3{
+	text-align: center;
+}
+/*Links*/
+a{
+	color: red;
+}
+a:link{
+	color: #123;
+}
+a:hover{
+	color: #444;
+}
+a:visited{
+	color: #128;
+}
+a:active{
+	color: #673;
+}
+/*Paragraph*/
+p{
+	font-size: 2em;
+	font-style: serif;
+	line-height: 2.5em;
+}
+/*Images*/
+img{
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	max-width: 100%; /*SITAS SVARU. NELEIDZIA PIC ISEIT IS SAVO BOXO. PADARO JI RESPONSIVE*/
+}
+/*Lists*/
+li{
+	list-style-type: circle;
+}
+nav, main, aside{
+	float: left;
+}
+header{
+	background-color: #FFE;
+}
+nav{
+	background-color: #FFD;
+	width: 25%;
+}
+main{
+	background-color: pink;
+	width: 50%;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+article{
+	background-color: #007;
+}
+aside{
+	background-color: #FFA;
+	width: 25%;
+}
+footer{
+	background-color: green;
+}
+.clearfix{
+	content: "";
+	display: block;
+	clear: both; /*nebeleidzia floatint. Sukuriam footer clearfix klase.
+}*/
