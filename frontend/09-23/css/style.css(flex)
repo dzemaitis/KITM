@@ -1,0 +1,70 @@
+/*base*/
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+html{
+	height: 100%;
+}
+.container{
+	width: 80%;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: row wrap;
+}
+.container > *{
+	width: 100%; 
+}
+/*Headings*/
+h1,h2,h3{
+	text-align: center;
+}
+/*Links*/
+a:hover{
+
+}
+a:active{
+css text leaving border
+}
+a:link{
+
+}
+a:visited{
+
+}
+/*Lists*/
+ul,ol{
+	list-style: none;
+}
+/*Images*/
+img{
+	border-radius: 50%;
+}
+/*Paragraphs*/
+p{
+	font-size: 2em;
+	font-style: serif;
+}
+header{
+	background-color: yellow;
+}
+nav{
+	background-color: #FFA;
+}
+article{
+	background-color: pink;
+}
+aside{
+	background-color: #FFB;
+}
+footer{
+	background-color: purple;
+	word-wrap: break-word;
+}
+nav,aside{
+	flex:1;
+}
+main{
+	flex:2;
+}

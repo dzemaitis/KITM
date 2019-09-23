@@ -1,0 +1,20 @@
+using System;
+
+namespace DOTNET
+{
+    public class Program
+    {
+       public static void Main(string[] args)
+        {
+		   string zvaigzdute = "*";
+		   Console.WriteLine("iveskit egles auksti");
+		   int kartai = Int32.Parse(Console.ReadLine());
+		   for(int i=0; i<kartai; i++)
+		   {	
+			   Console.Write(new String(' ', kartai-(1 +i)));
+			   Console.WriteLine(zvaigzdute);
+			   zvaigzdute = zvaigzdute + "**";
+		   }
+        }
+    }
+}

@@ -1,8 +1,8 @@
-body{
+.container{
 	font-family: 'Raleway', sans-serif;
 	background-color: white;
-	margin-left: 100px;
-	margin-right: 100px;
+	width: 80%;
+	margin: 0 auto;
 }
 header{
 	text-align: center;
@@ -17,6 +17,7 @@ section{
 }
 main{
 	text-align: center;
+	white-space: nowrap; /*cia fixas, kad tarp article nebutu white space. Kitaip paskutini numeta i kita line, ir veikia tik su article width 24%*/
 }
 article h2{
 	font-size: 1.8em;
@@ -25,8 +26,10 @@ article{
 	vertical-align: top;
 	display: inline-block;
 	font-size: 1.2em;
-	padding: 20px;
-	max-width: 250px;
+	text-align: left;
+	clear: none;
+	width: 25%;
+	white-space: normal; /*cia fixas, kad tarp article nebutu white space. Kitaip paskutini numeta i kita line, ir veikia tik su article width 24%*/
 }
 footer{
 	text-align: center;
@@ -36,7 +39,7 @@ footer p{
 	font-size: 0.9em;
 	color: grey;
 }
-footer p strong{
+footer p strong{ /*Strong vs span?*/
 	font-size: 1.1em;
 	color: black;
 }
