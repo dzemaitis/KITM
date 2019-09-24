@@ -1,0 +1,102 @@
+/*Base*/
+*{	
+	box-sizing: border-box; /*neleidzia pvz padingui isplest bloko, ir kad nenumestu i kita linija.*/ 
+	padding: 0;
+	margin: 0;
+}
+html{
+	height: 100%;
+}
+body{ /*Rekomenduojama nejudinti body. Geriau sukurti Body viduj diva su klase container ir i ji viska sudeti.*/
+	width: 80%;
+	margin: 0 auto;
+}
+/*Headings*/
+h1,h2,h3{
+	text-align: center;
+}
+/*Links*/
+a{
+	color: red;
+}
+a:link{
+	color: #123;
+}
+a:hover{
+	color: #444;
+}
+a:visited{
+	color: #128;
+}
+a:active{
+	color: #673;
+}
+/*Paragraph*/
+p{
+	font-size: 2em;
+	font-style: serif;
+	line-height: 2.5em;
+}
+/*Images*/
+img{
+	border: 1px solid #ddd;
+	border-radius: 50%;
+	max-width: 100%; /*SITAS SVARU. NELEIDZIA PIC ISEIT IS SAVO BOXO. PADARO JI RESPONSIVE*/
+}
+/*Lists*/
+li{
+	list-style-type: none;
+}
+/*Viskas kita*/
+nav, main, aside{
+	float: left; /*Su float realizuota isorinis layout.*/
+}
+
+header{
+	background-color: #FFE;
+	overflow-wrap: break-word;
+}
+nav{
+	background-color: #FFD;
+	width: 25%; /*Kiek uzima parent ploto. Gera praktika procentais, o ne pixeliais*/
+}
+main{
+	background-color: pink;
+	width: 50%;
+	display: grid; /*Maino viduj su grid realizuoti 4 article*/
+	grid-template-columns: 1fr 1fr 1fr 1fr; /*Ir cia*/
+}
+article{
+	background-color: #007;
+	overflow-wrap: break-word;
+}
+aside{
+	background-color: #FFA;
+	width: 25%;
+}
+footer{
+	background-color: green;
+	overflow-wrap: break-word;
+}
+.clearfix{
+	content: "";
+	display: block;
+	clear: both; /*nebeleidzia floatint. Sukuriam footer clearfix klase.*/
+}
+
+@media(max-width: 768px){ /*Namie perdaryt. Geriausia rasyt iskart po elemento media.*/
+	nav, main, aside{
+		float: none;
+		width: 100%;
+	}
+	main{
+		display: block;
+	}
+}
+
+@media(min-width: 768px) and (max-width: 1200px){
+	main{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+}
