@@ -1,0 +1,29 @@
+.container{
+	background-color: grey;	
+	position: relative; /*child elementai bus ribose sito parent elemento. Jeigu be jo, tada chil elementai su absolute , top0 priliptu prie html*/
+}
+.container div{	
+	margin: 0 auto;
+	width: 200px;
+	height: 200px;
+	text-align: center;
+	line-height: 200px;
+	position: absolute; /*lygtai i relative elementa atsiremia. Top parodo, i kuria krastine. Siuo atveju top*/
+	top: 0;
+}
+.container div:nth-child(1){
+	background-color: white;
+}
+.container div:nth-child(2){
+	background-color: blue;
+}
+.container div:nth-child(3){
+	background-color: red;
+	z-index: 123; /*parodo kuris ant virsaus. Kuo didesnis tuo auksciau.*/
+}
+.container div:nth-child(4){
+	background-color: #001;
+}
+.container div:nth-child(5){
+	background-color: #002;
+}
