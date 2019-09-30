@@ -1,0 +1,55 @@
+/*Header*/
+/*Button*/
+span, .container section ul li {
+  border-radius: 10px;
+  background-color: white;
+  text-align: center; }
+
+.container {
+  margin: 0 auto;
+  width: 80%; }
+  .container header {
+    height: 220px;
+    background-color: #8978aa; }
+    .container header h1 {
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 120px; }
+  .container nav {
+    background-color: #0056af;
+    /*variable*/
+    height: 100px; }
+    .container nav ul {
+      margin: auto; }
+      .container nav ul li {
+        list-style: none;
+        display: inline-block; }
+        .container nav ul li a {
+          text-decoration: none;
+          text-align: center; }
+          .container nav ul li a:hover {
+            /*& po desine kartojasi. reiskia a:hover. Tevini el ideda i &. Nebereikia antra karta rasyti a.*/
+            background-color: #ff6666;
+            text-align: center;
+            text-transform: uppercase; }
+  .container section {
+    background-color: grey;
+    height: 100px; }
+    .container section ul {
+      margin: auto; }
+      .container section ul li {
+        list-style: none;
+        /*extendas*/ }
+  .container footer {
+    background-color: yellow;
+    height: 100px; }
+    .container footer p {
+      margin: auto;
+      font-weight: bold;
+      text-align: center;
+      line-height: 100px;
+      height: 200px;
+      background-color: red;
+      /*mixin panaudojimas*/ }
+
+/*# sourceMappingURL=style.css.map */

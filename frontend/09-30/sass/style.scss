@@ -1,0 +1,60 @@
+@import "var";
+@import "components";
+@import "mixins";
+
+.container{
+	margin: 0 auto;
+	width: 80%;
+	header{
+		height: 220px;
+		background-color: #8978aa;
+		h1{
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 120px;
+		}
+	}	
+	nav{
+		background-color: $backgroundColor; /*variable*/
+		height: 100px;
+		ul{
+			margin: auto;
+			li{
+				list-style: none;
+				display: inline-block;
+				a{	
+					text-decoration: none;
+					text-align: center;
+					&:hover{ /*& po desine kartojasi. reiskia a:hover. Tevini el ideda i &. Nebereikia antra karta rasyti a.*/
+					background-color: lighten($color,20%);
+					text-align: center;
+					text-transform:uppercase;
+					}
+				}
+			}
+		}	
+	}
+	section{
+		background-color: grey;
+		height: 100px;
+		ul{
+			margin: auto;
+			li{
+				list-style: none;
+				@extend span; /*extendas*/
+			}		
+		}
+	}
+	footer{
+		background-color: yellow;
+		height: 100px;
+		p{
+			margin: auto;
+			font-weight: bold;
+			text-align: center;
+			line-height: 100px;
+			@include pirmas-mixin(red, 200px); /*mixin panaudojimas*/
+
+		}
+	}
+}

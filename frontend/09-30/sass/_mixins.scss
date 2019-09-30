@@ -1,0 +1,4 @@
+@mixin pirmas-mixin($bg-spalva, $aukstis){
+	height: $aukstis;
+	background-color: $bg-spalva;
+}
