@@ -25,7 +25,7 @@
 				a{	
 					text-decoration: none;
 					text-align: center;
-					&:hover{ /*& po desine kartojasi. reiskia a:hover. Tevini el ideda i &. Nebereikia antra karta rasyti a.*/
+					&:hover{ /*& po desine kartojasi(& tampa a). reiskia a:hover. Tevini el ideda i &. Nebereikia antra karta rasyti a.*/
 					background-color: lighten($color,20%);
 					text-align: center;
 					text-transform:uppercase;

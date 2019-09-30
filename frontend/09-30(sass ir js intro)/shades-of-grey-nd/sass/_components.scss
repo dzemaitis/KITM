@@ -1,0 +1,26 @@
+/*shades table*/
+.container{
+	width: 600px;
+	height: 450px;
+	margin: auto;
+	.titulinis{
+		height: 30%;
+		text-align: center;
+		background-color: black;
+		color: white;
+		overflow: auto; /*kad isvengti collapsing margins*/
+	}
+	.spalvu-deze{
+		height: 70%;
+		display: flex;
+		flex-wrap: wrap;
+		@for $i from 1 through 30 {
+  			.dezes:nth-child(0n + #{$i}) {
+    			background-color: darken(white, $i * 2%);
+    			width: 20%;
+ 			}
+		}
+	}
+}
+
+//cia mokiausi, galima ta pati pasiekt ir per component, bet tada neturim variable.

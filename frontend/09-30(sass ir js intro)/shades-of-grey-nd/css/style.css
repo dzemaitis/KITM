@@ -1,0 +1,107 @@
+.container {
+  width: 600px;
+  height: 450px;
+  margin: auto; }
+  .container .titulinis {
+    height: 30%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    overflow: auto;
+    /*kad isvengti collapsing margins*/ }
+  .container .spalvu-deze {
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap; }
+    .container .spalvu-deze .dezes:nth-child(0n + 1) {
+      background-color: #7b7b7b;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 2) {
+      background-color: #767676;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 3) {
+      background-color: #717171;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 4) {
+      background-color: #6c6c6c;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 5) {
+      background-color: #676767;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 6) {
+      background-color: #616161;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 7) {
+      background-color: #5c5c5c;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 8) {
+      background-color: #575757;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 9) {
+      background-color: #525252;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 10) {
+      background-color: #4d4d4d;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 11) {
+      background-color: #484848;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 12) {
+      background-color: #434343;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 13) {
+      background-color: #3e3e3e;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 14) {
+      background-color: #393939;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 15) {
+      background-color: #343434;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 16) {
+      background-color: #2e2e2e;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 17) {
+      background-color: #292929;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 18) {
+      background-color: #242424;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 19) {
+      background-color: #1f1f1f;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 20) {
+      background-color: #1a1a1a;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 21) {
+      background-color: #151515;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 22) {
+      background-color: #101010;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 23) {
+      background-color: #0b0b0b;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 24) {
+      background-color: #060606;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 25) {
+      background-color: #010101;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 26) {
+      background-color: black;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 27) {
+      background-color: black;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 28) {
+      background-color: black;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 29) {
+      background-color: black;
+      width: 20%; }
+    .container .spalvu-deze .dezes:nth-child(0n + 30) {
+      background-color: black;
+      width: 20%; }
+
+/*# sourceMappingURL=style.css.map */
