@@ -1,0 +1,37 @@
+* {
+  font-family: 'Raleway', sans-serif; }
+
+.text-success, .fas {
+  /*visi success is boostrap zalios i musu zalia*/
+  color: #00a99d !important; }
+
+.bg-success, .btn-success, .badge-success {
+  background-color: #00a99d !important; }
+
+.jumbotron {
+  background: none; }
+
+footer .row:nth-child(2) {
+  /*antra eile su zemelapiu*/
+  background-image: url("../img/map.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
+
+footer form {
+  /*baltas fonas formai*/
+  background-color: white;
+  padding: 1.5rem; }
+
+.split-icon {
+  /*kodas is stackoverflow, kad ikona butu sumustini. Kad visos ikonus butu vidury*/
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%); }
+
+/*
+1.) Paddingai per SASS
+2.) Karuseles (Owl carousel)
+*/
+
+/*# sourceMappingURL=style.css.map */

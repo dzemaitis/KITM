@@ -49,7 +49,7 @@
 // 	}
 // }
 
-var knygynas = {
+var knygynas = { // galima ir [] naudoti.
 	grozines : {
 		grozineKnyga1: {
 			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 421

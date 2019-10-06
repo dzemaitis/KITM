@@ -1,0 +1,46 @@
+*{
+	font-family: 'Raleway', sans-serif;
+}
+.text-success, .fas{  /*visi(ne visiem tinka.. email,tel ir kabutes.) success is boostrap zalios i musu zalia*/
+	color: red !important;
+}
+.bg-success, .btn-success, .badge-success{
+	background-color: #00a99d !important;
+}
+.jumbotron{
+	background:none;
+}
+
+/*.bg-secondary{
+  background-color: rgb(130,130,130) !important;
+}  bg spalva !*/
+
+/*Navigation*/
+/*1.)portfolio spalva, kai hover.*/
+/*Company facts*/
+/*hr kerta icona*/
+
+
+/*plancete persidengianti*/
+footer .row:nth-child(2){ /*antra eile su zemelapiu*/
+	background-image: url("../img/map.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+footer form{ /*baltas fonas formai*/
+	background-color: white;
+	padding: 1.5rem;
+}
+
+.split-icon{ /*kodas is stackoverflow, kad ikona butu sumustini. Kad visos ikonus butu vidury*/ 
+	display: block;
+	position: absolute;
+	left: 50%;
+	transform: translateY(-50%) translateX(-50%);
+}
+
+/*
+1.) Paddingai,margin per SASS
+2.) Karuseles (Owl carousel)
+*/
