@@ -52,56 +52,82 @@
 var knygynas = { // galima ir [] naudoti.
 	grozines : {
 		grozineKnyga1: {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 421
+			ISBN: 3548354, leidimoMetai: 1988, pavadinimas: "kulinarija", puslapiai: 421, kaina: 0.99
 		},
 		grozineKnyga2: {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 231
+			ISBN: 7441354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 231, kaina: 5.99
 		},
 		grozineKnyga3: {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 482
+			ISBN: 3592354, leidimoMetai: 2018, pavadinimas: "ziedu valdovdas", puslapiai: 482, kaina: 9.99
 		},
 		grozineKnyga4: {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 391
+			ISBN: 3321354, leidimoMetai: 2018, pavadinimas: "qwerty", puslapiai: 391, kaina: 12.99
 		},
 	},
 	mokslines : {
 		mokslineKnyga1 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 119
+			ISBN: 3548954, leidimoMetai: 1988, pavadinimas: "haris poteris2", puslapiai: 119, kaina: 8.75
 		},
 		mokslineKnyga2 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 222
+			ISBN: 3751354, leidimoMetai: 1888, pavadinimas: "nauji metai", puslapiai: 222, kaina: 6.75
 		},
 		mokslineKnyga3 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 222
+			ISBN: 3543454, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 222, kaina: 15.75
 		},
 		mokslineKnyga4 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 345
+			ISBN: 3549254, leidimoMetai: 1988, pavadinimas: "rokis balbo", puslapiai: 345, kaina: 11.00
 		},
 	},
 	detektyvai : {
 		detektyvineKnyga1 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 109
+			ISBN: 3546354, leidimoMetai: 1988, pavadinimas: "haris poteris4", puslapiai: 109, kaina: 15.30
 		},
 		detektyvineKnyga2 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 324
+			ISBN: 3541329, leidimoMetai: 1988, pavadinimas: "haris poteris1", puslapiai: 324, kaina: 9.30
 		},
 		detektyvineKnyga3 : {
-			ISBN: 3541354, leidimoMetai: 1988, pavadinimas: "romie", puslapiai: 221
+			ISBN: 3741354, leidimoMetai: 1988, pavadinimas: "romie", puslapiai: 221, kaina: 11.30
 		},
 		detektyvineKnyga4 : {
-			ISBN: 3541355, leidimoMetai: 1988, pavadinimas: "haris poteris", puslapiai: 623
+			ISBN: 3573355, leidimoMetai: 2018, pavadinimas: "haris poteris2", puslapiai: 623, kaina: 8.30
 		},
 	}
 }
-for (let kategorijos in knygynas){
-	for (let knygos in knygynas[kategorijos]){
-		if (knygynas[kategorijos][knygos]['puslapiai'] == 623) {
-			console.log("kategorijos: " + kategorijos)
-			console.log("knygu kiekis sitoj kategorijoj: " +Object.keys(knygynas[kategorijos]).length)
-			console.log(knygynas[kategorijos][knygos])
-		}
-		else{
-			continue
+// for (let kategorijos in knygynas){
+// 	for (let knygos in knygynas[kategorijos]){
+// 		console.log("kategorijos: " + kategorijos)
+// 		console.log("knygu kiekis sitoj kategorijoj: " +Object.keys(knygynas[kategorijos]).length)
+// 		for (var i in knygynas[kategorijos][knygos]){
+// 			console.log(knygynas[kategorijos][knygos][i])
+// 		}
+// 	}
+// }
+
+// console.log(knygynas['grozines']['grozineKnyga4']['ISBN'] < knygynas['grozines']['grozineKnyga3']['ISBN'])
+
+
+function isleista2008(){
+	console.log("Knygos isleistos 2018 metais:")
+	for (let kategorija in knygynas){
+		for(let knyga in knygynas[kategorija]){
+			if (knygynas[kategorija][knyga]['leidimoMetai'] == 2018){
+				console.log(knygynas[kategorija][knyga]['pavadinimas'])
+			}
 		}
 	}
 }
+// isleista2008()
+
+function pigiausia(){
+	for (let kategorija in knygynas){
+		var pigiausios_kaina = 999999999 //padaryt i max didziausia
+		for (let knyga in knygynas[kategorija]){
+			if (knygynas[kategorija][knyga]['kaina'] < pigiausios_kaina){
+				pigiausios_kaina = knygynas[kategorija][knyga]['kaina']
+			}
+		}
+	}
+console.log(pigiausios_kaina)
+}
+
+pigiausia()
