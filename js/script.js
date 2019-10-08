@@ -34,3 +34,4 @@ objektai.sort(function(a, b){
 });
 
 console.log(typeof objektai[0].kaina)
+alert(`tu ozys?')
