@@ -181,4 +181,77 @@ let skaitytojas_is_sd6 = new SkaitytojasSD6('deivis', 'zemaitis', [1,2,3])
 
 skaitytojas_is_sd6.greeting()
 
-//paveldejimas 
+//paveldejimas
+
+// DOM pamoka. (10-14)
+
+const navigation = document.querySelector('nav');
+
+navigation.addEventListener('click', change);
+
+function change()
+{
+	navigation.style.backgroundColor = '#eee';
+}
+
+// http://web-training.lt/uzduotys/js-sveciai.pdf
+
+
+// var sveciu_kiekis = document.querySelector('.sveciai');
+// const btn = document.querySelector('.atsakymas');
+//
+// btn.addEventListener('click', prideti);
+//
+// function prideti(){
+// 	var inp = document.createElement('INPUT');
+// 	document.body.appendChild(inp);
+// 	var mygtukas = document.createElement('BUTTON');
+// 	var mygtuko_uzrasas = document.createTextNode("prideti svecia");
+// 	mygtukas.appendChild(mygtuko_uzrasas);
+// 	document.body.appendChild(mygtukas);
+// }
+
+
+// pridejimas ir isemimas:
+// isemimas neveikia
+
+const input = document.querySelector('.task');
+const button = document.querySelector('.add');
+const list = document.querySelector('.listas');
+const buttonRemove = document.querySelector('.remove');
+
+
+
+button.addEventListener('click', run);
+buttonRemove.addEventListener('click', remove);
+
+
+function run(){
+	let li = document.createElement('li');
+	li.textContent = input.value;
+	list.appendChild(li);
+}
+
+function remove(){
+	const lastTask = document.querySelector('.listas li:last-child');
+	list.removeChild(lastTask);
+}
+
+// is input fieldo gaunam value stiliui:
+
+// const bg = document.querySelector('.background');
+// const text = document.querySelector('.textColor');
+// const button = document.querySelector("button");
+// const container	= document.querySelector('.container');
+//
+// button.addEventListener('click', keisk);
+//
+// function keisk(){
+// 	container.style.backgroundColor = bg.value;
+// 	container.style.backgroundColor = text.value;
+// }
+//
+
+// isvedam is formos input
+
+
