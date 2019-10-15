@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div class="container-fluid main">
+    <div class="row">
+        <aside class="col-sm-4">
+            <button class="showMenu">show Menu</button>
+        </aside>
+        <section class="col-sm-8 content">
+            <h2>Mokiniu sarasas</h2>
+            <div>
+                <ul class="mokiniai">
+
+                </ul>
+            </div>
+        </section>
+    </div>
+</div>
+<footer>
+
+</footer>
+
+<script>
+    let xhr = new XMLHttpRequest();
+    var sarasas = document.querySelector(".mokiniai");
+
+    xhr.onreadystatechange = function () {
+        if(this.readyState === 4 && this.status === 200){
+            let mokiniuArr = JSON.parse(this.responseText);
+            for(let mokinys of mokiniuArr){
+                if (mokinys['lokacija']){
+                var li = document.createElement('li');
+                li.innerHTML = mokinys['vardas'];
+                li.style.color = 'green';
+                sarasas.appendChild(li);
+                }
+                else{
+                    var li = document.createElement('li');
+                    li.innerHTML = mokinys['vardas'];
+                    li.style.color = 'red';
+                    sarasas.appendChild(li);
+                }
+            }
+        }
+    };
+    xhr.open("GET", "duomenys/mokiniai.json");
+    xhr.send();
+
+    // pavizdys su mokytoju, mygtukas prideda navgijacija kazka tokio:
+    // let xhr = new XMLHttpRequest();
+    // xhr.onreadystatechange = function(){
+    //     if(xhr.readyState === 4){
+    //         if(xhr.status === 200) {
+    //             document.querySelector('aside').innerHTML = xhr.responseText;
+    //         }
+    //         else {
+    //             alert(xhr.statusText);
+    //         }
+    //     }
+    // };
+    // xhr.open('GET', 'menu.html');
+    // document.querySelector('button.showMenu').onclick = function() {
+    //     xhr.send();
+    //     document.querySelector('button.showMenu').style.display = "none";
+    // };
+</script>
+
+<script src="js/script.js"></script>
+</body>
+</html>

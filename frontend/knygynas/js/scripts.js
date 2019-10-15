@@ -35,8 +35,8 @@ const knygos_ul = document.querySelector('.knygos');
 
 
 for (let kategorijos in knygynas){
-	let knyga = document.createElement('button')
-	knyga.innerHTML = kategorijos
+	let knyga = document.createElement('button');
+	knyga.innerHTML = kategorijos;
 	knygos_ul.append(knyga)
 }
 
