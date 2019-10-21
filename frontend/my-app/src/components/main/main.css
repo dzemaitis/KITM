@@ -1,0 +1,24 @@
+main{
+    display: inline-block;
+    width: 714px;
+    background-color: #1c7430;
+
+}
+main h1{
+    text-align: center;
+}
+main p{
+    margin-left: 3%;
+}
+main .fotkes{
+    display: flex;
+    justify-content: center;
+}
+
+main .fotke{
+    display: inline-block;
+    margin: 8px;
+    height: 100px;
+    width: 150px;
+    background-color: #c69500;
+}

@@ -1,0 +1,18 @@
+aside{
+    display: inline-block;
+    width: 310px;
+    text-align: center;
+    background-color: #0f6674;
+    vertical-align: top;
+}
+
+aside p{
+    padding: 4%;
+    word-wrap: break-word;
+}
+aside .fotke{
+    height: 100px;
+    width: 150px;
+    background-color: #c69500;
+}
+
