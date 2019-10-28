@@ -1,0 +1,175 @@
+import React, {Component} from 'react';
+import './App.scss';
+import nextId from "react-id-generator";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Button'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+
+class App extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            tableContent: [],
+        };
+        this.handleClick = this.handleClick.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+    }
+    handleClick(){
+        let updatedTable = this.state.tableContent;
+        updatedTable.push({
+            key: nextId(),
+            subject: this.state.subject,
+            priority: this.state.priority,
+            due_date: this.state.due_date,
+            status: "In progress",
+            date: new Date().toLocaleString(),
+
+        });
+        this.setState({
+            tableContent: updatedTable,
+        });
+    }
+    handleChange(event){
+        this.setState({
+            [event.target.name]: event.target.value,
+        })
+
+    }
+    taskDone(key){
+
+        let updatedTable = this.state.tableContent;
+        for(let i of updatedTable){
+            if(i.key === key){
+                i.status = "Done";
+                i.date = ("Completed on: " + new Date().toLocaleString())
+            }
+        }
+        this.setState({
+            tableContent: updatedTable,
+        });
+    }
+
+    removeRow(key){
+        let updatedTable = this.state.tableContent;
+        for(let i of updatedTable){
+            if(i.key === key){
+                let index = updatedTable.indexOf(i);
+                updatedTable.splice(index, 1);
+            }
+        }
+        this.setState({
+            tableContent: updatedTable
+        })
+    }
+
+    render(){
+        return (
+            <main className="toDo">
+                <Form>
+                    <Form.Group as={Row} controlId="formHorizontalEmail">
+                        <Form.Label column sm={2}>
+                            Subject
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" placeholder="Subject" name="subject" value={this.state.value} onChange={this.handleChange}/>
+                        </Col>
+                    </Form.Group>
+
+                    <fieldset>
+                        <Form.Group as={Row}>
+                            <Form.Label as="legend" column sm={2}>
+                                Priority
+                            </Form.Label>
+                            <Col sm={10}>
+                                <Form.Check
+                                    type="radio"
+                                    value="low"
+                                    onChange={this.handleChange}
+                                    label="Low"
+                                    name="priority"
+                                    id="formHorizontalRadios1"
+                                />
+                                <Form.Check
+                                    type="radio"
+                                    value="medium"
+                                    onChange={this.handleChange}
+                                    label="Medium"
+                                    name="priority"
+                                    id="formHorizontalRadios2"
+                                />
+                                <Form.Check
+                                    type="radio"
+                                    value="high"
+                                    onChange={this.handleChange}
+                                    label="High"
+                                    name="priority"
+                                    id="formHorizontalRadios3"
+                                />
+                            </Col>
+                        </Form.Group>
+                    </fieldset>
+
+                    <Form.Group as={Row} controlId="formHorizontalPassword">
+                        <Form.Label column sm={2}>
+                            Due date
+                        </Form.Label>
+                        <Col sm={10}>
+                            <Form.Control type="text" placeholder="Due date" name="due_date" value={this.state.value} onChange={this.handleChange}/>
+                        </Col>
+                    </Form.Group>
+
+                    <Form.Group as={Row}>
+                        <Col sm={{ span: 10, offset: 2 }}>
+                            <Button onClick={this.handleClick}>Add Task</Button>
+                        </Col>
+                    </Form.Group>
+                </Form>
+                <Table striped bordered hover variant="dark">
+                    <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Subject</th>
+                        <th>Priority</th>
+                        <th>Due date</th>
+                        <th>Status</th>
+                        <th>Percent completed</th>
+                        <th>Modified on</th>
+                        <th>Remove entry</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {this.state.tableContent.map((item) =>
+                        <tr key={item.key}>
+                            <td ><button onClick={() => this.taskDone(item.key)}>&#xae;</button></td>
+                            <td className={item.status === "Done" ? "low" : ""}>{item.status === "Done" ? <strike>{item.subject}</strike> : item.subject}</td>
+                            <td className={item.priority}>{item.status === "Done" ? <strike>{item.priority}</strike> : item.priority}</td>
+                            <td>{item.status === "Done" ? <strike>{item.due_date}</strike> : item.due_date}</td>
+                            <td>{item.status}</td>
+                            <td></td>
+                            <td>{item.date}</td>
+                            <td><Button variant="danger" onClick={() => this.removeRow(item.key)}>X</Button></td>
+                        </tr>
+                    )}
+                    </tbody>
+                </Table>
+                {/*<FontAwesomeIcon icon={faCoffee} />*/}
+                {/*    <Button variant="primary">Primary</Button>*/}
+                {/*    <Button variant="secondary">Secondary</Button>*/}
+                {/*    <Button variant="success">Success</Button>*/}
+
+                {/*    <Button variant="danger">Danger</Button>*/}
+                {/*    <Button variant="info">Info</Button>*/}
+                {/*    <Button variant="light">Light</Button>*/}
+                {/*    <Button variant="dark">Dark</Button>*/}
+                {/*    <Button variant="link">Link</Button>*/}
+            </main>
+        );
+    }
+}
+
+export default App;
