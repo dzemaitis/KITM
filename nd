@@ -1,0 +1,138 @@
+import React, {Component} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Table from 'react-bootstrap/Table';
+import Form from 'react-bootstrap/Form'
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
+import Button from 'react-bootstrap/Row';
+
+class App extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      tableContent: [],
+      key: 1,
+    };
+    this.handleClick = this.handleClick.bind(this);
+    this.handleChange = this.handleChange.bind(this);
+  }
+  handleClick(){
+    let updatedTable = this.state.tableContent;
+    updatedTable.push({
+      key: this.state.key,
+      subject: this.state.subject,
+      priority: this.state.priority,
+      due_date: this.state.due_date,
+      status: "In progress",
+      date: new Date().toLocaleString(),
+
+    });
+    this.setState({
+      tableContent: updatedTable,
+      key: this.state.key + 1,
+    });
+  }
+  handleChange(event){
+    this.setState({
+      [event.target.name]: event.target.value,
+    })
+
+  }
+
+  render(){
+    return (
+        <main className="toDo">
+          <button onClick={this.handleClick}>Add new line</button>
+
+          <Form>
+            <Form.Group as={Row} controlId="formHorizontalEmail">
+              <Form.Label column sm={2}>
+                Subject
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control type="text" placeholder="Subject" name="subject" value={this.state.value} onChange={this.handleChange}/>
+              </Col>
+            </Form.Group>
+
+            <fieldset>
+              <Form.Group as={Row}>
+                <Form.Label as="legend" column sm={2}>
+                  Priority
+                </Form.Label>
+                <Col sm={10}>
+                  <Form.Check
+                      type="radio"
+                      value="low"
+                      onChange={this.handleChange}
+                      label="Low"
+                      name="priority"
+                      id="formHorizontalRadios1"
+                  />
+                  <Form.Check
+                      type="radio"
+                      value="medium"
+                      onChange={this.handleChange}
+                      label="Medium"
+                      name="priority"
+                      id="formHorizontalRadios2"
+                  />
+                  <Form.Check
+                      type="radio"
+                      value="high"
+                      onChange={this.handleChange}
+                      label="High"
+                      name="priority"
+                      id="formHorizontalRadios3"
+                  />
+                </Col>
+              </Form.Group>
+            </fieldset>
+
+            <Form.Group as={Row} controlId="formHorizontalPassword">
+              <Form.Label column sm={2}>
+                Due date
+              </Form.Label>
+              <Col sm={10}>
+                <Form.Control type="text" placeholder="Subject" name="due_date" value={this.state.value} onChange={this.handleChange}/>
+              </Col>
+            </Form.Group>
+
+            <Form.Group as={Row}>
+              <Col sm={{ span: 10, offset: 2 }}>
+                <Button type="submit">Add Task</Button>
+              </Col>
+            </Form.Group>
+          </Form>
+          <Table striped bordered hover variant="dark">
+            <thead>
+            <tr>
+              <th>#</th>
+              <th>Subject</th>
+              <th>Priority</th>
+              <th>Due date</th>
+              <th>Status</th>
+              <th>Percent completed</th>
+              <th>Modified on</th>
+            </tr>
+            </thead>
+            <tbody>
+            {this.state.tableContent.map((item) =>
+                <tr key={item.key}>
+                  <td>{item.key}</td>
+                  <td>{item.subject}</td>
+                  <td>{item.priority}</td>
+                  <td>{item.due_date}</td>
+                  <td>{item.status}</td>
+                  <td></td>
+                  <td>{item.date}</td>
+                  <td></td>
+                </tr>
+            )}
+            </tbody>
+          </Table>
+        </main>
+    );
+  }
+}
+
+export default App;
